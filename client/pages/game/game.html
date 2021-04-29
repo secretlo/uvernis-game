@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <style>
+         /* [>css<] */
+      </style>
+
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Raleway&display=swap" rel="stylesheet">
+   </head>
+
+   <body>
+      <div class="info col aic jcsb">
+         <h2 class="f-extra">Ожидание</h2>
+
+         <div class="info__content">
+            <p>
+            ID игры <strong><span id="gameIdElement"></span></strong>.
+            Поделитесь им с друзьями и подождите пока они подключатся.
+            На текущий момент в игре
+            <strong>
+               <span id=connectionCount>1</span> 
+               <span id=connectionCountWord>игрок</span>
+            </strong>.
+         </div>
+
+         <div class="row">
+            <button class="info__button" id="buttonReady">
+               <div>
+                  Готов играть
+                  (<span class="ready-count">0</span>/<span class="total-count">0</span>)
+               </div>
+            </button>
+            <button class="info__button dn" id="buttonNotReady">
+               <div>
+                  НЕ готов
+                  (<span class="ready-count">0</span>/<span class="total-count">0</span>)
+               </div>
+            </button>
+            <button class="info__button" id=buttonDisconnect style="margin-left: 2em;">
+               <div>Выйти</div>
+            </button>
+         </div>
+      </div>
+
+      <div class="game dn">
+         <footer class="row jcc aic">
+            <div id="messageBox"></div>
+            <button id=buttonLeave>Выйти</button>
+         </footer>
+      </div>
+      
+      <!-- [>html<] -->
+
+      <script>/* [>js<] */</script>
+   </body>
+
+</html>

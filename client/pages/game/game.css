@@ -1,0 +1,125 @@
+.logo::before, .logo::after {
+   content: '';
+   display: block;
+   border: 10px solid rgba(255, 255, 255, 0.53);
+   backdrop-filter: blur(10px);
+}
+
+.logo {
+   font-size: 90px;
+   line-height: 38px;
+   height: 136px;
+   
+   text-align: center;
+   color: rgba(255, 255, 255, 0.5);
+   margin: 25px auto;
+   -webkit-backdrop-filter: blur(10px);
+   
+   transition: 0.5s ease;
+}
+
+.logo_top {
+   transform: translateY(-50%) scale(0.9);
+}
+.logo_bottom {
+   transform: translateY(50%) scale(0.9);
+}
+.logo_top, .logo_bottom {
+   color: #fff;
+}
+
+button {
+   font-family: 'Raleway', sans-serif;
+   font-size: 30px;
+   text-align: center;
+   background: none;
+   border: none;
+   cursor: pointer;
+   color: #ffffff7f;
+   transition: 0.5s;
+}
+button:hover {
+   color: #fff;
+}
+
+h2 {
+   margin: 0;
+   font-size: 40px;
+}
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.info {
+   height: 518px;
+}
+
+.info * {
+   color: #ffffff7f;
+}
+.info button {
+   text-decoration: underline;
+}
+.info__content {
+   width: 660px;
+   font-size: 40px;
+   line-height: 38px;
+   text-align: justify;
+   font-family: 'Raleway', sans-serif;
+}
+
+footer {
+   position: absolute;
+   bottom: 1em;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+.player {
+   background: rgba(255, 255, 255, 0.8);
+   border: 10px solid rgba(0, 0, 0, 0.03);
+   width: 60px;
+   height: 60px;
+   transform: translate(-50%, -50%);
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: -1;
+   border-radius: 50%;
+}
+.enemy {
+   background: #2656FF;
+   border: 9px solid rgba(0, 0, 0, 0.05);
+   transform: translate(-50%, -50%);
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: -1;
+   border-radius: 50%;
+}
+.enemy_speed_3 {
+   width: 18px;
+   height: 18px;
+}
+.enemy_speed_2 {
+   width: 30px;
+   height: 30px;
+}
+.enemy_speed_1 {
+   width: 42px;
+   height: 42px;
+}
+
+.game {
+   width: 100%;
+   height: 100vh;
+   overflow: hidden;
+   position: relative;
+}
+
+#messageBox {
+   color: #ffffff7f;
+}
