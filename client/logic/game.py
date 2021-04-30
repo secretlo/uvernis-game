@@ -103,11 +103,8 @@ get_task_counter = 0
 def get_tasks(callback):
    global get_task_counter
    get_task_counter += 1
-   if not storage.tasks.empty():
-      #print('getTasks: storage.tasks is', storage.tasks)
-      tasks = []
-      while not storage.tasks.empty():
-         tasks.append(storage.tasks.get())
+   tasks = storage.get_all_tasks()
+   if len(tasks) > 0:
       print('getTasks: some tasks', '; '.join([f'{t[0]}(' + ', '.join(map(str, t[1])) + ')' for t in tasks]))
       callback.Call(tasks)
    else:

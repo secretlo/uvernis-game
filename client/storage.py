@@ -25,6 +25,11 @@ this.host = None
 this.tasks = multiprocessing.Queue(20)
 def add_task(js_func_name, *args):
    this.tasks.put([js_func_name, args])
+def get_all_tasks():
+   tasks = []
+   while not this.tasks.qsize() == 0:
+      tasks.append(this.tasks.get())
+   return tasks
 
 FLASK_HOST = '127.0.0.1'
 
@@ -62,7 +67,7 @@ response_handlers = []
 def _on_response():
    req = request.get_json()
    action = req['action']
-   print(f'_on_response: Post with action "{action}"')
+   print(f'_on_response: Post with action "{action}" and data {req}')
    response = None
    for [handler_action, handler] in response_handlers:
       if handler_action == action:
@@ -80,11 +85,12 @@ def add_response_handler(action, callback):
 def run_server():
    this.host = FLASK_HOST
    this.port = _get_free_port()
-   process = multiprocessing.Process(target=_connect_stuff, args=(this.host, this.port))
+   process = multiprocessing.Process(target=_connect_stuff, args=(this.host, this.port, this.tasks))
    this.connection_process = process
    process.start()
    
-def _connect_stuff(host, port):
+def _connect_stuff(host, port, tasks):
+   this.tasks = tasks
    this.flask.run(host, port)
    
 def _get_free_port():

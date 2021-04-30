@@ -37,7 +37,7 @@ class Browser():
     
 
     def read(self, relpath):
-        with open(path.join(path.dirname(__file__), relpath), 'r') as file:
+        with open(path.join(path.dirname(__file__), relpath), 'r', encoding='UTF-8') as file:
            return file.read()
    
     def load_page(self, page_name):

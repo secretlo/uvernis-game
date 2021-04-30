@@ -66,5 +66,6 @@
       "cinttypes": "cpp",
       "typeinfo": "cpp",
       "valarray": "cpp"
-   }
+   },
+   "python.pythonPath": "C:\\Program Files\\Python37\\python.exe"
 }

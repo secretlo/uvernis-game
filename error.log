@@ -1462,3 +1462,402 @@ AttributeError: 'NoneType' object has no attribute 'terminate'
     storage.connection_process.terminate()
 AttributeError: 'NoneType' object has no attribute 'terminate'
 
+
+[2021-04-30 08:23:26] Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Program Files\Python37\lib\http\client.py", line 1369, in getresponse
+    response.begin()
+  File "C:\Program Files\Python37\lib\http\client.py", line 310, in begin
+    version, status, reason = self._read_status()
+  File "C:\Program Files\Python37\lib\http\client.py", line 279, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 756, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\util\retry.py", line 532, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\packages\six.py", line 734, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Program Files\Python37\lib\http\client.py", line 1369, in getresponse
+    response.begin()
+  File "C:\Program Files\Python37\lib\http\client.py", line 310, in begin
+    version, status, reason = self._read_status()
+  File "C:\Program Files\Python37\lib\http\client.py", line 279, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "v8function_handler.pyx", line 48, in cefpython_py37.V8FunctionHandler_Execute
+  File "D:\SWAP\ФТИ\1курс\Программирование\Подъюбкин_Курсач_Флиртович\Тимур_Дубинский/client\logic\game.py", line 98, in send_disconnect
+    storage.gameload('disconnect', {})
+  File "D:\SWAP\ФТИ\1курс\Программирование\Подъюбкин_Курсач_Флиртович\Тимур_Дубинский/client\storage.py", line 54, in gameload
+    return this.load('/game', final_data)
+  File "D:\SWAP\ФТИ\1курс\Программирование\Подъюбкин_Курсач_Флиртович\Тимур_Дубинский/client\storage.py", line 37, in load
+    res = requests.post(f'{SERVER}{path}', data)
+  File "C:\Program Files\Python37\lib\site-packages\requests\api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+
+[2021-04-30 09:09:37] Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Program Files\Python37\lib\http\client.py", line 1369, in getresponse
+    response.begin()
+  File "C:\Program Files\Python37\lib\http\client.py", line 310, in begin
+    version, status, reason = self._read_status()
+  File "C:\Program Files\Python37\lib\http\client.py", line 279, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 756, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\util\retry.py", line 532, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\packages\six.py", line 734, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Program Files\Python37\lib\http\client.py", line 1369, in getresponse
+    response.begin()
+  File "C:\Program Files\Python37\lib\http\client.py", line 310, in begin
+    version, status, reason = self._read_status()
+  File "C:\Program Files\Python37\lib\http\client.py", line 279, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "v8function_handler.pyx", line 48, in cefpython_py37.V8FunctionHandler_Execute
+  File "D:\SWAP\ФТИ\1курс\Программирование\Подъюбкин_Курсач_Флиртович\Тимур_Дубинский/client\logic\game.py", line 99, in send_disconnect
+    storage.gameload('disconnect', {})
+  File "D:\SWAP\ФТИ\1курс\Программирование\Подъюбкин_Курсач_Флиртович\Тимур_Дубинский/client\storage.py", line 54, in gameload
+    return this.load('/game', final_data)
+  File "D:\SWAP\ФТИ\1курс\Программирование\Подъюбкин_Курсач_Флиртович\Тимур_Дубинский/client\storage.py", line 37, in load
+    res = requests.post(f'{SERVER}{path}', data)
+  File "C:\Program Files\Python37\lib\site-packages\requests\api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+
+[2021-04-30 09:12:26] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 48, in cefpython_py37.V8FunctionHandler_Execute
+  File "D:\SWAP\ФТИ\1курс\Программирование\Подъюбкин_Курсач_Флиртович\Тимур_Дубинский/client\logic\game.py", line 106, in get_tasks
+    tasks = storage.get_all_tasks()
+  File "D:\SWAP\ФТИ\1курс\Программирование\Подъюбкин_Курсач_Флиртович\Тимур_Дубинский/client\storage.py", line 30, in get_all_tasks
+    while not storage.tasks.qsize() == 0:
+NameError: name 'storage' is not defined
+
+
+[2021-04-30 09:13:09] Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Program Files\Python37\lib\http\client.py", line 1369, in getresponse
+    response.begin()
+  File "C:\Program Files\Python37\lib\http\client.py", line 310, in begin
+    version, status, reason = self._read_status()
+  File "C:\Program Files\Python37\lib\http\client.py", line 279, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 756, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\util\retry.py", line 532, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\packages\six.py", line 734, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Program Files\Python37\lib\http\client.py", line 1369, in getresponse
+    response.begin()
+  File "C:\Program Files\Python37\lib\http\client.py", line 310, in begin
+    version, status, reason = self._read_status()
+  File "C:\Program Files\Python37\lib\http\client.py", line 279, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "v8function_handler.pyx", line 48, in cefpython_py37.V8FunctionHandler_Execute
+  File "D:\SWAP\ФТИ\1курс\Программирование\Подъюбкин_Курсач_Флиртович\Тимур_Дубинский/client\logic\game.py", line 98, in send_disconnect
+    storage.gameload('disconnect', {})
+  File "D:\SWAP\ФТИ\1курс\Программирование\Подъюбкин_Курсач_Флиртович\Тимур_Дубинский/client\storage.py", line 59, in gameload
+    return this.load('/game', final_data)
+  File "D:\SWAP\ФТИ\1курс\Программирование\Подъюбкин_Курсач_Флиртович\Тимур_Дубинский/client\storage.py", line 42, in load
+    res = requests.post(f'{SERVER}{path}', data)
+  File "C:\Program Files\Python37\lib\site-packages\requests\api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+
+[2021-04-30 09:18:44] Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Program Files\Python37\lib\http\client.py", line 1369, in getresponse
+    response.begin()
+  File "C:\Program Files\Python37\lib\http\client.py", line 310, in begin
+    version, status, reason = self._read_status()
+  File "C:\Program Files\Python37\lib\http\client.py", line 279, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 756, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\util\retry.py", line 532, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\packages\six.py", line 734, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Program Files\Python37\lib\http\client.py", line 1369, in getresponse
+    response.begin()
+  File "C:\Program Files\Python37\lib\http\client.py", line 310, in begin
+    version, status, reason = self._read_status()
+  File "C:\Program Files\Python37\lib\http\client.py", line 279, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "v8function_handler.pyx", line 48, in cefpython_py37.V8FunctionHandler_Execute
+  File "D:\SWAP\ФТИ\1курс\Программирование\Подъюбкин_Курсач_Флиртович\Тимур_Дубинский/client\logic\game.py", line 98, in send_disconnect
+    storage.gameload('disconnect', {})
+  File "D:\SWAP\ФТИ\1курс\Программирование\Подъюбкин_Курсач_Флиртович\Тимур_Дубинский/client\storage.py", line 59, in gameload
+    return this.load('/game', final_data)
+  File "D:\SWAP\ФТИ\1курс\Программирование\Подъюбкин_Курсач_Флиртович\Тимур_Дубинский/client\storage.py", line 42, in load
+    res = requests.post(f'{SERVER}{path}', data)
+  File "C:\Program Files\Python37\lib\site-packages\requests\api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+
+[2021-04-30 09:19:34] Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Program Files\Python37\lib\http\client.py", line 1369, in getresponse
+    response.begin()
+  File "C:\Program Files\Python37\lib\http\client.py", line 310, in begin
+    version, status, reason = self._read_status()
+  File "C:\Program Files\Python37\lib\http\client.py", line 279, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 756, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\util\retry.py", line 532, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\packages\six.py", line 734, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Program Files\Python37\lib\http\client.py", line 1369, in getresponse
+    response.begin()
+  File "C:\Program Files\Python37\lib\http\client.py", line 310, in begin
+    version, status, reason = self._read_status()
+  File "C:\Program Files\Python37\lib\http\client.py", line 279, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "v8function_handler.pyx", line 48, in cefpython_py37.V8FunctionHandler_Execute
+  File "D:\SWAP\ФТИ\1курс\Программирование\Подъюбкин_Курсач_Флиртович\Тимур_Дубинский/client\logic\game.py", line 98, in send_disconnect
+    storage.gameload('disconnect', {})
+  File "D:\SWAP\ФТИ\1курс\Программирование\Подъюбкин_Курсач_Флиртович\Тимур_Дубинский/client\storage.py", line 59, in gameload
+    return this.load('/game', final_data)
+  File "D:\SWAP\ФТИ\1курс\Программирование\Подъюбкин_Курсач_Флиртович\Тимур_Дубинский/client\storage.py", line 42, in load
+    res = requests.post(f'{SERVER}{path}', data)
+  File "C:\Program Files\Python37\lib\site-packages\requests\api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+
+[2021-04-30 09:21:37] Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Program Files\Python37\lib\http\client.py", line 1369, in getresponse
+    response.begin()
+  File "C:\Program Files\Python37\lib\http\client.py", line 310, in begin
+    version, status, reason = self._read_status()
+  File "C:\Program Files\Python37\lib\http\client.py", line 279, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 756, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\util\retry.py", line 532, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\packages\six.py", line 734, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Program Files\Python37\lib\site-packages\urllib3\connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Program Files\Python37\lib\http\client.py", line 1369, in getresponse
+    response.begin()
+  File "C:\Program Files\Python37\lib\http\client.py", line 310, in begin
+    version, status, reason = self._read_status()
+  File "C:\Program Files\Python37\lib\http\client.py", line 279, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "v8function_handler.pyx", line 48, in cefpython_py37.V8FunctionHandler_Execute
+  File "D:\SWAP\ФТИ\1курс\Программирование\Подъюбкин_Курсач_Флиртович\Тимур_Дубинский/client\logic\game.py", line 98, in send_disconnect
+    storage.gameload('disconnect', {})
+  File "D:\SWAP\ФТИ\1курс\Программирование\Подъюбкин_Курсач_Флиртович\Тимур_Дубинский/client\storage.py", line 59, in gameload
+    return this.load('/game', final_data)
+  File "D:\SWAP\ФТИ\1курс\Программирование\Подъюбкин_Курсач_Флиртович\Тимур_Дубинский/client\storage.py", line 42, in load
+    res = requests.post(f'{SERVER}{path}', data)
+  File "C:\Program Files\Python37\lib\site-packages\requests\api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\requests\adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+

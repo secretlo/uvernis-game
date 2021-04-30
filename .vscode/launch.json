@@ -15,7 +15,12 @@
          "name": "Python: Static",
          "type": "python",
          "request": "launch",
-         "program": "/media/feodoritiy/HDD/SWAP/ФТИ/1курс/Программирование/Подъюбкин_Курсач_Флиртович/Тимур_Дубинский/client/main.py",
+         "windows": {
+            "program": "${workspaceFolder}/client/main.py",
+         },
+         "linux": {
+            "program": "/media/feodoritiy/HDD/SWAP/ФТИ/1курс/Программирование/Подъюбкин_Курсач_Флиртович/Тимур_Дубинский/client/main.py",
+         },
          "args": [],
          "console": "integratedTerminal",
       },

@@ -40,13 +40,13 @@ class PageSinglifier():
         html_libs = {}
         
         for filename in os.listdir(js_libs_folder):
-            with open(path.join(js_libs_folder, filename), 'r+') as file:
+            with open(path.join(js_libs_folder, filename), 'r+', encoding='UTF-8') as file:
                 js_libs[filename[:-3]] = file.read()
         for filename in os.listdir(css_libs_folder):
-            with open(path.join(css_libs_folder, filename), 'r+') as file:
+            with open(path.join(css_libs_folder, filename), 'r+', encoding='UTF-8') as file:
                 css_libs[filename[:-4]] = file.read()
         for filename in os.listdir(html_libs_folder):
-            with open(path.join(html_libs_folder, filename), 'r+') as file:
+            with open(path.join(html_libs_folder, filename), 'r+', encoding='UTF-8') as file:
                 html_libs[filename[:-5]] = file.read()
                 
         return PageSinglifierLibs(js_libs, css_libs, html_libs)
@@ -69,11 +69,11 @@ class PageSinglifier():
             css_file_path = page_folder_file + '.css'
             js_file_path = page_folder_file + '.js'
             
-            with open(html_file_path, 'r') as html_file:
+            with open(html_file_path, 'r', encoding='UTF-8') as html_file:
                 basis_html = html_file.read()
-            with open(css_file_path, 'r') as css_file:
+            with open(css_file_path, 'r', encoding='UTF-8') as css_file:
                 css = css_file.read()
-            with open(js_file_path, 'r') as js_file:
+            with open(js_file_path, 'r', encoding='UTF-8') as js_file:
                 js = js_file.read() 
                 
             basis_html = basis_html.replace('/* [>css<] */', libs.css_str + css)
@@ -83,7 +83,7 @@ class PageSinglifier():
             # images            
             for imagename in os.listdir(images_folder):
                 imagepath = path.join(images_folder, imagename)
-                with open(imagepath, 'r') as imagefile:
+                with open(imagepath, 'r', encoding='UTF-8') as imagefile:
                     image = imagefile.read()
                     basis_html = basis_html.replace(f'<img src="[{imagename}]"', f'<img src="{image}"')
                     basis_html = basis_html.replace(f'url([{imagename}])', f'url(\'{image}\')')
@@ -92,7 +92,7 @@ class PageSinglifier():
             result_html = basis_html
             
             cache_file = path.join(cache_folder, page_folder_name) + '.html'
-            with open(cache_file, 'w+') as file:
+            with open(cache_file, 'w+', encoding='UTF-8') as file:
                 file.write(result_html)
                 print(f'Cache file updated:', cache_file, f'({page_folder_name}.html)')
                 
